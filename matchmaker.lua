@@ -26,7 +26,7 @@ local function getMatchmakerInfo()
     local tbPlayers = getPlayerInfo()
     local tbMatchmakerInfo = {}
     tbMatchmakerInfo["matchmaker"] = szType
-    tbMatchmakerInfo["webhook"] = "http://"..wrk.thread:get("webhook")
+    tbMatchmakerInfo["webhook"] = wrk.thread:get("webhook")
     tbMatchmakerInfo["players"] = tbPlayers
     tbMatchmakerInfo["auto_team_formation"] = false
     return tbMatchmakerInfo
