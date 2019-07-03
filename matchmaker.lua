@@ -1,4 +1,5 @@
-local JSON = (loadfile "/local/JSON.lua")()
+-- local JSON = (loadfile "/local/JSON.lua")()
+local JSON = require("JSON")
 
 local nPlayerId = 1
 
