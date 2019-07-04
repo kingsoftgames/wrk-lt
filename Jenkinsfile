@@ -27,7 +27,7 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Build mrk') {
+        stage('Build wrk') {
             steps {
                 sh """
                     git submodule init wrk2/
