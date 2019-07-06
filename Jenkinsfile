@@ -39,7 +39,7 @@ pipeline {
         }
         stage('Archive') {
             steps {
-                zip zipFile: 'target/wrk.zip', dir: 'target', glob: '', archive: true
+                zip zipFile: 'wrk.zip', dir: 'target', glob: '', archive: true
             }
         }
     }
