@@ -59,7 +59,7 @@ function request()
         -- Start matchmaking.
         tbBody = getMatchmakerInfo()
     end
-    print(Json:encode(tbBody))
+    print(JSON:encode(tbBody))
     return wrk.format("POST", wrk.thread:get("path"), tbHeaders, JSON:encode(tbBody))
 end
 
