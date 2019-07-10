@@ -11,7 +11,7 @@ local function getPlayerInfo()
     local tbPlayerInfo = {}
     tbPlayerInfo["token"] = 0
     tbPlayerInfo["player_id"] = nPlayerId
-    tbPlayerInfo["player_data"] = "xxx"
+    tbPlayerInfo["player_data"] = nPlayerId
     tbPlayerInfo["player_attributes"] = tbPlayerAttribute
     tbPlayerInfo["team_id"] = 0
 
