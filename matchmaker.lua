@@ -2,7 +2,7 @@
 package.path = '/local/?.lua;' .. package.path
 local JSON = require("JSON")
 
-local nPlayerId = 1
+local nPlayerId = os.time() * 1000
 
 local function getPlayerInfo()
     local tbPlayerAttribute = {}
