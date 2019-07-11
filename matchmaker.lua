@@ -1,8 +1,9 @@
 -- local JSON = (loadfile "/local/JSON.lua")()
 package.path = '/local/?.lua;' .. package.path
 local JSON = require("JSON")
+local UID = require("UID")
 
-local nPlayerId = os.time() * 1000
+local nPlayerId = os.time() + UID.generate()
 
 local function getPlayerInfo()
     local tbPlayerAttribute = {}

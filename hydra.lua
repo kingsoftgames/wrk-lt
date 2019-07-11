@@ -1,4 +1,7 @@
-local nPlayerId = os.time() * 1000
+package.path = '/local/?.lua;' .. package.path
+local UID = require("UID")
+
+local nPlayerId = os.time() + UID.generate()
 local szAud = "com.seasungames.rog2"
 
 local tbPath = {}
