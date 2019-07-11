@@ -21,12 +21,20 @@ local function getPlayerInfo()
     return tbPlayers
 end
 
+local function getMatchmakerType()
+    local szType = wrk.thread:get("type")
+    if szType == "random_all" then
+        local tbMatchmaker = {"m100011-t1", "m100011-t2", "m100011-t4", "m100011-t1-noob", "m100011-t4-noob"}
+        szType = tbMatchmaker[math.random(1, #tbMatchmaker)]
+    end
+    return szType
+end
+
 local function getMatchmakerInfo()
     nPlayerId = nPlayerId + 1;
-    local tbMatchmaker = {"m100011-t1", "m100011-t2", "m100011-t4", "m100011-t1-noob", "m100011-t4-noob"}
-    local szType = tbMatchmaker[math.random(1, #tbMatchmaker)]
-
+    local szType = getMatchmakerType()
     local tbPlayers = getPlayerInfo()
+
     local tbMatchmakerInfo = {}
     tbMatchmakerInfo["matchmaker"] = szType
     tbMatchmakerInfo["webhook"] = wrk.thread:get("webhook")
@@ -44,6 +52,7 @@ end
 function init(args)
     wrk.thread:set("cancel_percentage", args[1])
     wrk.thread:set("webhook", args[2])
+    wrk.thread:set("type", args[3])
 end
 
 function request()
