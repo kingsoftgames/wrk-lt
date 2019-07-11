@@ -23,7 +23,7 @@ end
 
 local function getMatchmakerType()
     local szType = wrk.thread:get("type")
-    if szType == "random_all" then
+    if szType == "random-all" then
         local tbMatchmaker = {"m100011-t1", "m100011-t2", "m100011-t4", "m100011-t1-noob", "m100011-t4-noob"}
         szType = tbMatchmaker[math.random(1, #tbMatchmaker)]
     end
