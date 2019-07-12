@@ -16,6 +16,7 @@
 --
 local VERSION = '20170927.26' -- version history at end of file
 local AUTHOR_NOTE = "-[ JSON.lua package by Jeffrey Friedl (http://regex.info/blog/lua/json) version 20170927.26 ]-"
+local type = type
 
 --
 -- The 'AUTHOR_NOTE' variable exists so that information about the source
